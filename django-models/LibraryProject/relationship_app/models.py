@@ -17,3 +17,9 @@ class Library(models.Model):
     books = models.ManyToManyField(Book, related_name='library')
     def __str__(self):
         return self.name
+
+class Librarian(models.Model):
+    name = models.CharField()
+    library = models.OneToOneField(Library, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name
