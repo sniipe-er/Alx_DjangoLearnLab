@@ -8,6 +8,6 @@ class Author(models.Model):
 
 class Book(models.Model):
     title = models.CharField()
-    Author = models.ForeignKey(Author)
+    author = models.ForeignKey(Author)
     def __str__(self):
         return self.title
