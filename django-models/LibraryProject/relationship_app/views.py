@@ -10,6 +10,4 @@ def list_books(request):
     return render(request, 'relationship_app/list_books.html', context)
 
 class library_detail(models.Model):
-    library = Library.objects.all()
-    context = {'library_detail': library}
-    render(library, 'relationship_app/library_detail.html', context)
+    
