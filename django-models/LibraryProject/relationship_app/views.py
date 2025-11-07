@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from .models import *
+from .models import Book , Library
 # Create your views here.
 def list_books(request):
     books = Book.objects.all()
     context = {'list_books': books}
     return render(request, 'relationship_app/list_books.html', context)
 
-def book_list(request):
-    books = Book.objects.all()
-    context = {'book_list': books}
-    return render(request, 'relationship_app/book_list.html', context)
+def library_detail(request):
+    library = Library.objects.all()
+    context = {'library_detail': library}
+    return render(request, 'relationship_app/library_detail.html', context)
