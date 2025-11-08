@@ -18,6 +18,6 @@ class LibraryDetailView(ListView):
     context_object_name = 'books'
 
 class SignUpView(CreateView):
-    form_class = UserCreationForm
+    form_class = UserCreationForm()
     success_url = reverse_lazy("login")
     template_name = "register.html"
