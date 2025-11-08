@@ -6,5 +6,5 @@ urlpatterns = [
     path('librarydetail/<int:pk>/', LibraryDetailView.as_view(), name='LibraryDetailView'),
     path('login/', LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
-    path('register/', register.as_view(template_name='register.html'), name='register')
+    path('register/', register.as_view(template_name='register.html'), name='register'),
 ]
