@@ -16,4 +16,4 @@ class LibraryDetailView(ListView):
     template_name = 'relationship_app/library_detail.html'
     context_object_name = 'books'
 
-class 
+class register (request)
