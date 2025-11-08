@@ -3,6 +3,7 @@ from .models import Book
 from .models import Library
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
+from django.contrib.auth.views import LoginView, LogoutView
 
 # Create your views here.
 def list_books(request):
@@ -13,3 +14,6 @@ class LibraryDetailView(ListView):
     model = Book
     template_name = 'relationship_app/library_detail.html'
     context_object_name = 'books'
+
+class login(LoginView):
+    
