@@ -8,4 +8,4 @@ class BookAdmin(admin.ModelAdmin):
     search_fields = ('title', 'author')
 
 class ModelAdmin(admin.ModelAdmin):
-    pass
+    admin = admin.site.register(CustomUser, CustomUserAdmin)
