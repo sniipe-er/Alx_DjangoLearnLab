@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+AUTH_USER_MODEL = 'bookshelf.CustomUser'
 
 ROOT_URLCONF = 'LibraryProject.urls'
 
