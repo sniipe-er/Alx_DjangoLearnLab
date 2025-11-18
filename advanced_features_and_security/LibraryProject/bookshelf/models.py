@@ -11,3 +11,7 @@ class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     date_of_birth = models.DateField()
     profile_photo = models.ImageField(upload_to='profile_pics/', null=True, blank=True)
+
+class CustomUserManager(BaseUserManager):
+    create_user = CustomUser.objects.create_user
+    create_superuser = CustomUser.objects.create_superuser
