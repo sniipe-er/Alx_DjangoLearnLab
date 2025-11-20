@@ -51,6 +51,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 AUTH_USER_MODEL = 'bookshelf.CustomUser'
+SECURE_BROWSER_XSS_FILTER = True
+XFRAME_OPTIONS = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 ROOT_URLCONF = 'LibraryProject.urls'
 
