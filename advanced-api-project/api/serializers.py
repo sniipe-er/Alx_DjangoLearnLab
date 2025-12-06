@@ -5,6 +5,11 @@ class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = ['id', 'title', 'author', 'publication_year']
+    
+    def validate_publication_year(self, value):
+        if value > 2025:
+            raise serializers.ValidationError("Publication year cannot be in the future.")
+        return value    
 
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
